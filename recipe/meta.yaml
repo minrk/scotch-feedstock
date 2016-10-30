@@ -1,9 +1,11 @@
+{% set variant = os.environ.get('SCOTCH_VARIANT', '') %}
+
 {% set name = "scotch" %}
 {% set version = "6.0.4" %}
 {% set md5 = "d58b825eb95e1db77efe8c6ff42d329f" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ variant + name }}
   version: {{ version }}
 
 source:
@@ -13,28 +15,51 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
+  script_env:
+    - SCOTCH_VARIANT
 
 requirements:
  build:
   - toolchain
-  - zlib 1.2.* 
+  - zlib 1.2.*
   - bison
   - flex
+  {% if variant == 'pt' %}
+  - mpich 3.2.*
+  {% endif %}
  run:
-  - zlib 1.2.* 
+  - zlib 1.2.*
+  {% if variant == 'pt' %}
+  - mpich 3.2.*
+  {% endif %}
 
 test:
   commands:
+    - ls "${PREFIX}/lib"
     - test -f "${PREFIX}/lib/libscotch.a"
     - test -f "${PREFIX}/lib/libscotcherr.a"
     - test -f "${PREFIX}/lib/libscotcherrexit.a"
     - test -f "${PREFIX}/lib/libscotchmetis.a"
+    {% if variant == 'pt' %}
+    - test -f "${PREFIX}/lib/libptesmumps.a"
+    - test -f "${PREFIX}/lib/libptscotch.a"
+    - test -f "${PREFIX}/lib/libptscotcherr.a"
+    - test -f "${PREFIX}/lib/libptscotcherrexit.a"
+    - test -f "${PREFIX}/lib/libptscotchparmetis.a"
+    {% else %}
     - test -f "${PREFIX}/lib/libesmumps.a"
+    {% endif %}
+    - ls "${PREFIX}/include"
     - test -f "${PREFIX}/include/esmumps.h"
     - test -f "${PREFIX}/include/metis.h"
     - test -f "${PREFIX}/include/scotch.h"
     - test -f "${PREFIX}/include/scotchf.h"
+    {% if variant == 'pt' %}
+    - test -f "${PREFIX}/include/parmetis.h"
+    - test -f "${PREFIX}/include/ptscotch.h"
+    - test -f "${PREFIX}/include/ptscotchf.h"
+    {% endif %}
     - mord -V
     - gotst -V
     - gord -V

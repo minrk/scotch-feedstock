@@ -9,7 +9,7 @@ else
   sed -i 's#-l$(SCOTCHLIB)errexit#-l$(SCOTCHLIB)errexit -lm#g' esmumps/Makefile
 fi
 
-make ${SCOTCH_VARIANT}esmumps | tee make.log 2>&1
+make esmumps | tee make.log 2>&1
 make check
 cd ..
 

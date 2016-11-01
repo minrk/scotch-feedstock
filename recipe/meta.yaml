@@ -27,6 +27,8 @@ requirements:
   - mpich 3.2.*
 
 test:
+  requires:
+    - toolchain
   commands:
     - test -f "${PREFIX}/lib/libscotch.a"
     - test -f "${PREFIX}/lib/libscotcherr.a"

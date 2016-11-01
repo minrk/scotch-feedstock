@@ -1,5 +1,5 @@
-About scotch
-============
+About ptscotch
+==============
 
 Home: https://www.labri.fr/perso/pelegrin/scotch/
 
@@ -7,7 +7,7 @@ Package license: CeCILL-C
 
 Feedstock license: BSD 3-Clause
 
-Summary: SCOTCH: Static Mapping, Graph, Mesh and Hypergraph Partitioning, and Parallel and Sequential Sparse Matrix Ordering Package
+Summary: PT-SCOTCH: (Parallel) Static Mapping, Graph, Mesh and Hypergraph Partitioning, and Parallel and Sequential Sparse Matrix Ordering Package
 
 Software package and libraries for sequential and parallel
 graph partitioning, static mapping and clustering, sequential
@@ -15,25 +15,25 @@ mesh and hypergraph partitioning, and sequential and parallel
 sparse matrix block ordering.
 
 
-Installing scotch
-=================
+Installing ptscotch
+===================
 
-Installing `scotch` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `ptscotch` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `scotch` can be installed with:
+Once the `conda-forge` channel has been enabled, `ptscotch` can be installed with:
 
 ```
-conda install scotch
+conda install ptscotch
 ```
 
-It is possible to list all of the versions of `scotch` available on your platform with:
+It is possible to list all of the versions of `ptscotch` available on your platform with:
 
 ```
-conda search scotch --channel conda-forge
+conda search ptscotch --channel conda-forge
 ```
 
 
@@ -81,21 +81,21 @@ Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scotch/badges/version.svg)](https://anaconda.org/conda-forge/scotch)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scotch/badges/downloads.svg)](https://anaconda.org/conda-forge/scotch)
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ptscotch/badges/version.svg)](https://anaconda.org/conda-forge/ptscotch)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ptscotch/badges/downloads.svg)](https://anaconda.org/conda-forge/ptscotch)
 
 
-Updating scotch-feedstock
-=========================
+Updating ptscotch-feedstock
+===========================
 
-If you would like to improve the scotch recipe or build a new
+If you would like to improve the ptscotch recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/scotch-feedstock are
+Note that all branches in the conda-forge/ptscotch-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

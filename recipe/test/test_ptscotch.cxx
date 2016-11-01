@@ -1,8 +1,9 @@
 // test source: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=612621
-#include <mpi.h>
-#include <ptscotch.h>
 #include <iostream>
 #include <cstdlib>
+
+#include <mpi.h>
+#include <ptscotch.h>
 
 int main() {
   int provided;

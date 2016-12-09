@@ -15,6 +15,18 @@ mesh and hypergraph partitioning, and sequential and parallel
 sparse matrix block ordering.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/scotch-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/scotch-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/scotch-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/scotch-feedstock)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ptscotch/badges/version.svg)](https://anaconda.org/conda-forge/ptscotch)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ptscotch/badges/downloads.svg)](https://anaconda.org/conda-forge/ptscotch)
+
 Installing ptscotch
 ===================
 
@@ -35,7 +47,6 @@ It is possible to list all of the versions of `ptscotch` available on your platf
 ```
 conda search ptscotch --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -71,18 +82,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/scotch-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/scotch-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/scotch-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/scotch-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ptscotch/badges/version.svg)](https://anaconda.org/conda-forge/ptscotch)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ptscotch/badges/downloads.svg)](https://anaconda.org/conda-forge/ptscotch)
 
 
 Updating ptscotch-feedstock

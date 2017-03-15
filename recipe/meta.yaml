@@ -20,7 +20,7 @@ requirements:
   - toolchain
   - zlib 1.2.*
   - bison
-  - flex
+  - flex 2.6.0
   - mpich 3.2.*
  run:
   - zlib 1.2.*

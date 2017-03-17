@@ -11,7 +11,7 @@ CCP		= mpicc
 CCD		= clang
 CFLAGS		= -I${PREFIX}/include -O3 -Drestrict=__restrict -DCOMMON_FILE_COMPRESS_GZ -DCOMMON_PTHREAD -DCOMMON_PTHREAD_BARRIER -DCOMMON_RANDOM_FIXED_SEED -DCOMMON_TIMING_OLD -DSCOTCH_RENAME
 CLIBFLAGS	=
-LDFLAGS		= -L${PREFIX}/lib -lz -lm -lpthread
+LDFLAGS		= -L${PREFIX}/lib -lz -lm -lpthread -Wl,-headerpad_max_install_names
 CP		= cp
 LEX		= flex -Pscotchyy -olex.yy.c
 LN		= ln

@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 2
 
 requirements:
  build:
@@ -31,10 +31,10 @@ test:
     - test -f "${PREFIX}/lib/libscotcherrexit.a"
     - test -f "${PREFIX}/lib/libscotchmetis.a"
     - test -f "${PREFIX}/lib/libesmumps.a"
-    - test -f "${PREFIX}/include/esmumps.h"
-    - test -f "${PREFIX}/include/metis.h"
     - test -f "${PREFIX}/include/scotch.h"
     - test -f "${PREFIX}/include/scotchf.h"
+    - test -f "${PREFIX}/include/metis.h"
+    - test -f "${PREFIX}/include/esmumps.h"
     - mord -V
     - gotst -V
     - gord -V
@@ -56,4 +56,5 @@ about:
 extra:
   recipe-maintainers:
     - basnijholt
+    - dalcinl
     - minrk

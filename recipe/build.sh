@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cp $RECIPE_DIR/Makefile.inc.common src/Makefile.inc.common
 cp $RECIPE_DIR/Makefile.inc.$(uname) src/Makefile.inc
 
 cd src/

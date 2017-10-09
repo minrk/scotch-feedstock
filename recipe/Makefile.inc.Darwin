@@ -1,8 +1,0 @@
-# -*- makefile -*-
-src_dir := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
-include $(src_dir)/Makefile.inc.common
-
-CCS             = clang
-CCD             = clang
-CLIBFLAGS      := $(CLIBFLAGS) -fPIC
-LDFLAGS        := $(LDFLAGS) -Wl,-headerpad_max_install_names

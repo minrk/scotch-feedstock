@@ -1,4 +1,5 @@
 # -*- makefile -*-
+
 EXE             =
 LIB             = .a
 OBJ             = .o
@@ -7,12 +8,12 @@ MAKE            = make
 AR              = ar
 ARFLAGS         = -ruv
 CAT             = cat
-CCS             = gcc
+CCS            := ${CC}
 CCP             = mpicc
-CCD             = gcc
-CFLAGS          = -I${PREFIX}/include -O3 -DIDXSIZE64 -Drestrict=__restrict -DCOMMON_FILE_COMPRESS_GZ -DCOMMON_RANDOM_FIXED_SEED -DSCOTCH_RENAME -DCOMMON_PTHREAD -DCOMMON_PTHREAD_BARRIER -DSCOTCH_PTHREAD
-CLIBFLAGS       =
-LDFLAGS         = -L${PREFIX}/lib -lz -lm -pthread
+CCD            := ${CC}
+CFLAGS         := ${CFLAGS}
+CLIBFLAGS      := ${CLIBFLAGS}
+LDFLAGS        := ${LDFLAGS}
 CP              = cp
 LEX             = flex -Pscotchyy --no-yywrap -olex.yy.c
 LN              = ln

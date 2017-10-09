@@ -1,5 +1,0 @@
-# -*- makefile -*-
-src_dir := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
-include $(src_dir)/Makefile.inc.common
-
-LDFLAGS        := ${LDFLAGS} -lrt

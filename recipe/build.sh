@@ -11,6 +11,10 @@ else
     export LDFLAGS="${LDFLAGS} -lrt"
 fi
 
+if [[ "$PKG_NAME" == "scotch" ]]; then
+    # allow non-mpi scotch to use threads
+    export CFLAGS="${CFLAGS} -DSCOTCH_PTHREAD"
+fi
 
 # build
 cd src/

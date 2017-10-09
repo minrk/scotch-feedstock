@@ -23,7 +23,7 @@ else
 fi
 
 cd src/
-make -j ${NUM_CPUS} ${LIBNAME} | tee make.log 2>&1
+make ${LIBNAME} | tee make.log 2>&1
 make check
 cd ..
 

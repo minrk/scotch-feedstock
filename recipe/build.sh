@@ -15,6 +15,7 @@ if [ "$PKG_NAME" == "scotch" ]
 then
 
 export CFLAGS="${CFLAGS} -DSCOTCH_PTHREAD"
+export CCD=${CC}
 
 # build
 cd src/
@@ -34,6 +35,9 @@ fi # scotch
 
 if [ "$PKG_NAME" == "ptscotch" ]
 then
+
+export CCP=mpicc
+export CCD=${CCP}
 
 export HYDRA_LAUNCHER=fork
 export MPIEXEC=mpiexec

@@ -1,7 +1,7 @@
 {% set name = "scotch" %}
-{% set build = 4 %}
-{% set version = "6.0.4" %}
-{% set sha256 = "f53f4d71a8345ba15e2dd4e102a35fd83915abf50ea73e1bf6efe1bc2b4220c7" %}
+{% set build = 0 %}
+{% set version = "6.0.5" %}
+{% set sha256 = "302c200e0fd4f80ae8992f1c26ad47c734c463bd040b8b7b64469bdb222fe2db" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,6 @@ source:
   sha256: {{ sha256 }}
   patches:
     - patch1.diff
-    - patch2.diff
 
 build:
   skip: true  # [win]

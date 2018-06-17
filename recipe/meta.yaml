@@ -2,8 +2,6 @@
 {% set build = 4 %}
 {% set version = "6.0.4" %}
 {% set sha256 = "f53f4d71a8345ba15e2dd4e102a35fd83915abf50ea73e1bf6efe1bc2b4220c7" %}
-{% set mpi = os.environ.get('MPI_VARIANT', 'mpich') %}
-{% set mpi_version = {'mpich': '3.2.*', 'openmpi': '3.0.*'}[mpi] %}
 
 package:
   name: {{ name }}
@@ -28,13 +26,13 @@ requirements:
   - flex 2.6.0
   - zlib 1.2.*
   {% if name == 'ptscotch' %}
-  - {{ mpi }} {{ mpi_version }}
+  - {{ mpi }}
   {% endif %}
  run:
   - zlib 1.2.*
   {% if name == 'ptscotch' %}
   - scotch {{version}}
-  - {{ mpi }} {{ mpi_version }}
+  - {{ mpi }}
   {% endif %}
 
 test:

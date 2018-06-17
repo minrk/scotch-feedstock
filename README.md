@@ -18,14 +18,16 @@ sparse matrix block ordering.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/scotch-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/scotch-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/scotch-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/scotch-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/scotch-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/scotch-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/scotch-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/scotch-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scotch/badges/version.svg)](https://anaconda.org/conda-forge/scotch)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scotch/badges/downloads.svg)](https://anaconda.org/conda-forge/scotch)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scotch-green.svg)](https://anaconda.org/conda-forge/scotch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scotch.svg)](https://anaconda.org/conda-forge/scotch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scotch.svg)](https://anaconda.org/conda-forge/scotch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scotch.svg)](https://anaconda.org/conda-forge/scotch) |
 
 Installing scotch
 =================

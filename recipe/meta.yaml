@@ -1,5 +1,5 @@
 {% set name = "scotch" %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set version = "6.0.5" %}
 {% set sha256 = "302c200e0fd4f80ae8992f1c26ad47c734c463bd040b8b7b64469bdb222fe2db" %}
 
@@ -20,15 +20,17 @@ build:
 
 requirements:
  build:
-  - toolchain
+  - {{ compiler('fortran') }}
+  - {{ compiler('c') }}
+ host:
   - bison
   - flex 2.6.0
-  - zlib 1.2.*
+  - zlib
   {% if name == 'ptscotch' %}
   - {{ mpi }}
   {% endif %}
  run:
-  - zlib 1.2.*
+  - zlib
   {% if name == 'ptscotch' %}
   - scotch {{version}}
   - {{ mpi }}
@@ -72,9 +74,9 @@ about:
   summary: 'PT-SCOTCH: (Parallel) Static Mapping, Graph, Mesh and Hypergraph Partitioning, and Parallel and Sequential Sparse Matrix Ordering Package'
   {% endif %}
   description: |
-    Software package and libraries for sequential and parallel 
-    graph partitioning, static mapping and clustering, sequential 
-    mesh and hypergraph partitioning, and sequential and parallel 
+    Software package and libraries for sequential and parallel
+    graph partitioning, static mapping and clustering, sequential
+    mesh and hypergraph partitioning, and sequential and parallel
     sparse matrix block ordering.
   doc_url: http://gforge.inria.fr/docman/?group_id=248&dirid=326
 

@@ -38,7 +38,7 @@ requirements:
 
 test:
   requires:
-    - toolchain
+    - {{ compiler('cxx') }}
   commands:
     {% if name == 'scotch' %}
     - test -f "${PREFIX}/lib/libscotch.a"

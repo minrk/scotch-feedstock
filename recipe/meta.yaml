@@ -50,6 +50,8 @@ outputs:
         - test -f "${PREFIX}/include/scotch/metis.h"
         - test ! -f "${PREFIX}/include/metis.h"
   - name: ptscotch
+    build:
+      script: ${RECIPE_DIR}/build.sh
     requirements:
       host:
         - flex

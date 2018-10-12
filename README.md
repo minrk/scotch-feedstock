@@ -27,6 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ptscotch-green.svg)](https://anaconda.org/conda-forge/ptscotch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ptscotch.svg)](https://anaconda.org/conda-forge/ptscotch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ptscotch.svg)](https://anaconda.org/conda-forge/ptscotch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ptscotch.svg)](https://anaconda.org/conda-forge/ptscotch) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-scotch-green.svg)](https://anaconda.org/conda-forge/scotch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scotch.svg)](https://anaconda.org/conda-forge/scotch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scotch.svg)](https://anaconda.org/conda-forge/scotch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scotch.svg)](https://anaconda.org/conda-forge/scotch) |
 
 Installing scotch
@@ -38,16 +39,16 @@ Installing `scotch` from the `conda-forge` channel can be achieved by adding `co
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `scotch` can be installed with:
+Once the `conda-forge` channel has been enabled, `ptscotch, scotch` can be installed with:
 
 ```
-conda install scotch
+conda install ptscotch scotch
 ```
 
-It is possible to list all of the versions of `scotch` available on your platform with:
+It is possible to list all of the versions of `ptscotch` available on your platform with:
 
 ```
-conda search scotch --channel conda-forge
+conda search ptscotch --channel conda-forge
 ```
 
 

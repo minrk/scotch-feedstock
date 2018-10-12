@@ -1,12 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-if command -v mpichversion >/dev/null; then
+if [[ "$mpi" == "mpich" ]]; then
     export HYDRA_LAUNCHER=fork
     mpiexec="mpiexec"
 fi
 
-if command -v ompi_info >/dev/null; then
+if [[ "$mpi" == "openmpi" ]]; then
     export OMPI_MCA_plm=isolated
     export OMPI_MCA_rmaps_base_oversubscribe=yes
     export OMPI_MCA_btl_vader_single_copy_mechanism=none

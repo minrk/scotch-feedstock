@@ -1,0 +1,10 @@
+flex:
+  - 2.6.0
+mpi:
+  - mpich
+  - openmpi
+
+pin_run_as_build:
+  scotch:
+    max_pin: x.x.x
+    min_pin: x.x.x

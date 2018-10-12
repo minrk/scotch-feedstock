@@ -32,7 +32,7 @@ dgpart -V
 dgscat -V
 dgtst -V
 
-mpic++ $CXXFLAGS "-I$PREFIX/include" "-L$PREFIX/lib" "${RECIPE_DIR}/test/test_ptscotch.cxx" -o test_ptscotch -DSCOTCH_PTSCOTCH -lptscotch -lptscotcherr
+mpic++ $CXXFLAGS $LDFLAGS "-I$PREFIX/include" "-L$PREFIX/lib" "${RECIPE_DIR}/test/test_ptscotch.cxx" -o test_ptscotch -DSCOTCH_PTSCOTCH -lptscotch -lptscotcherr
 mpiexec -n 1 ./test_ptscotch
 
 fi # ptscotch
